@@ -18,6 +18,9 @@ a{color:inherit;text-decoration:none}
 a.navlink:hover{color:#1FB5A8}
 button{font-family:inherit}
 input,select,textarea{font-family:inherit}
+/* Services responsive grid */
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:520px){.svc-grid{grid-template-columns:1fr!important}}
 /* WhatsApp floating button */
 .wa-float{
   position:fixed;bottom:28px;right:28px;z-index:9999;
@@ -70,9 +73,9 @@ input,select,textarea{font-family:inherit}
   <section id="top" style="background:#0B2545;color:#FFFFFF;border-top:1px solid #1B3A63">
     <div style="max-width:1200px;margin:0 auto;padding:80px 24px 96px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
       <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:24px">
-        <span style="align-self:flex-start;background:rgba(31,181,168,0.18);color:#7FE3D9;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.06em">MANAGEMENT · IT ADVISORY · COMPLIANCE · BUSINESS SETUP</span>
-        <h1 style="margin:0;font-size:clamp(36px,5.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-0.02em">Where expertise meets <span style="color:#1FB5A8">intelligence</span></h1>
-        <p style="margin:0;font-size:19px;line-height:1.6;color:#C9D6E6;max-width:560px">A forward-thinking consulting partner for SMEs, entrepreneurs and growing businesses in the Kingdom of Bahrain and across the GCC, combining professional expertise with intelligent technology.</p>
+        <span style="align-self:flex-start;background:rgba(31,181,168,0.18);color:#7FE3D9;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.06em">MANAGEMENT · IT ADVISORY · DATA ANALYTICS · COMPLIANCE · BUSINESS SETUP</span>
+        <h1 style="margin:0;font-size:clamp(36px,5.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-0.02em">Where expertise meets <span style="color:#1FB5A8">intelligence.</span></h1>
+        <p style="margin:0;font-size:19px;line-height:1.6;color:#C9D6E6;max-width:560px">A consulting partner for SMEs, entrepreneurs and growing businesses, combining agile management consulting, data analytics and modern technology into insight-led business outcome.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a href="#contact" style="background:#1FB5A8;color:#0B2545;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px">Book a consultation</a>
           <a href="#services" style="border:2px solid #FFFFFF;color:#FFFFFF;padding:14px 26px;border-radius:999px;font-weight:700;font-size:16px">Explore our services</a>
@@ -80,13 +83,23 @@ input,select,textarea{font-family:inherit}
         <p style="margin:8px 0 0;font-size:15px;font-weight:700;letter-spacing:0.12em;color:#7FE3D9">AGILE · STEADFAST · TECH-DRIVEN</p>
       </div>
 
-      <div style="flex:0 1 440px;min-width:min(100%,280px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
-        <sc-for list="{{pillars}}" as="p" hint-placeholder-count="4">
-          <div style="background:#12335C;border:1px solid #24497A;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;min-height:120px;box-sizing:border-box">
-            <span style="font-size:15px;font-weight:800;color:#1FB5A8">{{p.n}}</span>
-            <span style="font-size:17px;font-weight:700;line-height:1.3">{{p.title}}</span>
+      <div style="flex:0 1 440px;min-width:min(100%,280px);background:#12335C;border:1px solid #24497A;border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:32px;box-sizing:border-box">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:13px;font-weight:800;letter-spacing:0.12em;color:#1FB5A8">WHO WE HELP</span>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:19px;font-weight:700">
+            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>SMEs</li>
+            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Entrepreneurs</li>
+            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Growing businesses</li>
+          </ul>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:13px;font-weight:800;letter-spacing:0.12em;color:#1FB5A8">WHERE WE WORK</span>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="border:2px solid #1FB5A8;color:#FFFFFF;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:800">Bahrain</span>
+            <span style="border:2px solid #1FB5A8;color:#FFFFFF;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:800">KSA</span>
+            <span style="border:2px solid #1FB5A8;color:#FFFFFF;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:800">UAE</span>
           </div>
-        </sc-for>
+        </div>
       </div>
     </div>
   </section>
@@ -96,7 +109,7 @@ input,select,textarea{font-family:inherit}
     <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
       <div style="max-width:680px;display:flex;flex-direction:column;gap:12px">
         <span style="font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0F6B63">About us</span>
-        <h2 style="margin:0;font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:800;letter-spacing:-0.01em">Professional expertise, powered by modern technology</h2>
+        <h2 style="margin:0;font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:800;letter-spacing:-0.01em">Business accumen, data analytics and AI, working together</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
         <div style="background:#E9F4F2;border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:16px">
@@ -104,14 +117,16 @@ input,select,textarea{font-family:inherit}
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </span>
           <h3 style="margin:0;font-size:24px;font-weight:800;color:#0F5E5A">Our Vision</h3>
-          <p style="margin:0;font-size:17px;line-height:1.65;color:#2A3B52">To be the trusted, forward-thinking consulting partner for businesses in the region, where professional expertise meets intelligent technology.</p>
+          <p style="margin:0;font-size:17px;line-height:1.65;color:#2A3B52">To be the region's most trusted catalyst for intelligent business transformation, where human expertise, data analytics and AI turn every decision into a competitive edge.</p>
+          <span style="font-size:14px;font-weight:800;letter-spacing:0.1em;color:#0F5E5A">DATA-LED INTELLIGENCE | TRANSFORM</span>
         </div>
         <div style="background:#E9F4F2;border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:16px">
           <span style="width:52px;height:52px;border-radius:50%;background:#0F5E5A;display:inline-flex;align-items:center;justify-content:center">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>
           </span>
           <h3 style="margin:0;font-size:24px;font-weight:800;color:#0F5E5A">Our Mission</h3>
-          <p style="margin:0;font-size:17px;line-height:1.65;color:#2A3B52">To help businesses operate efficiently, stay compliant and grow sustainably, combining business and regulatory insight, strategic thinking and modern technology with agility and dependability.</p>
+          <p style="margin:0;font-size:17px;line-height:1.65;color:#2A3B52">To empower SMEs and growing enterprises to scale with confidence by combining agile management consulting, data analytics and modern technology into insight-led, dependable solutions that turn data into decisions and decisions into growth.</p>
+          <span style="font-size:14px;font-weight:800;letter-spacing:0.1em;color:#0F5E5A">EMPOWER | ANALYSE | SCALE</span>
         </div>
       </div>
     </div>
@@ -124,24 +139,70 @@ input,select,textarea{font-family:inherit}
         <span style="font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0F6B63">Our services</span>
         <h2 style="margin:0;font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:800;letter-spacing:-0.01em">Four ways we help your business move forward</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px">
-        <sc-for list="{{services}}" as="s" hint-placeholder-count="4">
-          <div style="background:{{s.bg}};color:#FFFFFF;border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:20px">
-            <div style="display:flex;align-items:center;gap:16px">
-              <span style="font-size:40px;font-weight:800;line-height:1;color:{{s.numColor}}">{{s.n}}</span>
-              <h3 style="margin:0;font-size:24px;font-weight:800;line-height:1.2">{{s.title}}</h3>
-            </div>
-            <p style="margin:0;font-size:16px;line-height:1.55;color:#E6F4F2">{{s.intro}}</p>
-            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
-              <sc-for list="{{s.items}}" as="it" hint-placeholder-count="4">
-                <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"></path></svg>
-                  <span>{{it}}</span>
-                </li>
-              </sc-for>
-            </ul>
+      <div class="svc-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+
+        <!-- 01 -->
+        <div style="background:#0F5E5A;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;line-height:1;color:#7FE3D9">01</span>
+            <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Management Consulting</h3>
           </div>
-        </sc-for>
+          <p style="margin:0;font-size:14px;line-height:1.55;color:#C5E8E5">Practical strategy and structure to help your business run better.</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Strategy and business planning</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Process improvement</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Governance and operating models</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Performance and KPI frameworks</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Finance &amp; accounting operational setup</li>
+          </ul>
+        </div>
+
+        <!-- 02 -->
+        <div style="background:#0E736E;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;line-height:1;color:#B6F0EA">02</span>
+            <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">IT &amp; Digital Advisory</h3>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.55;color:#C5E8E5">Technology guidance that fits your business and your budget.</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Digital transformation roadmaps</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>AI-enabled technology advisory</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Data analytics and business intelligence</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Accounting and business software selection</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>IT systems and technology strategy</li>
+          </ul>
+        </div>
+
+        <!-- 03 -->
+        <div style="background:#1F2933;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;line-height:1;color:#7FE3D9">03</span>
+            <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Compliance &amp; Governance Advisory</h3>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.55;color:#C5E8E5">Helping you get ready for, and stay on top of, your obligations.</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Compliance readiness reviews</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Gap assessments of financial, tax and operational processes</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FE3D9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Internal control framework design</li>
+          </ul>
+        </div>
+
+        <!-- 04 -->
+        <div style="background:#1B6B5F;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:28px;font-weight:800;line-height:1;color:#B6F0EA">04</span>
+            <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Business Setup Support</h3>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.55;color:#C5E8E5">Support for entrepreneurs and growing businesses setting up or expanding in the region.</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Company formation support</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Entity selection advisory</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Market entry and GCC expansion planning</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Business plans and feasibility studies</li>
+            <li style="display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B6F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Post-registration compliance guidance</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -162,7 +223,8 @@ input,select,textarea{font-family:inherit}
         <h2 style="margin:0;font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:800;letter-spacing:-0.01em">Let us talk about your business</h2>
         <p style="margin:0;font-size:18px;line-height:1.6;color:#2A3B52">Tell us what you are working on and we will get back to you.</p>
         <div style="display:flex;flex-direction:column;gap:12px;font-size:17px;font-weight:600">
-          <span>Phone: [PHONE]</span>
+          <span>Phone (Bahrain &amp; KSA): [PHONE]</span>
+          <span>Phone (UAE): [PHONE]</span>
           <span>Email: [EMAIL]</span>
           <span>Web: [WEBSITE]</span>
           <a href="https://wa.me/[WHATSAPP_NUMBER]" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;color:#0F5E5A">
@@ -177,6 +239,9 @@ input,select,textarea{font-family:inherit}
         </label>
         <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Email
           <input type="email" name="email" placeholder="you@company.com" style="height:48px;padding:0 14px;border:1.5px solid #AEBBCB;border-radius:10px;font-size:16px;box-sizing:border-box;width:100%;background:#FFFFFF">
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Phone / WhatsApp
+          <input type="tel" name="phone" placeholder="+973 XXXX XXXX" style="height:48px;padding:0 14px;border:1.5px solid #AEBBCB;border-radius:10px;font-size:16px;box-sizing:border-box;width:100%;background:#FFFFFF">
         </label>
         <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">I am interested in
           <select name="service" style="height:48px;padding:0 10px;border:1.5px solid #AEBBCB;border-radius:10px;font-size:16px;background:#FFFFFF;box-sizing:border-box;width:100%">
@@ -202,8 +267,9 @@ input,select,textarea{font-family:inherit}
     <div style="max-width:1200px;margin:0 auto;padding:56px 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
 
       <!-- Brand col -->
-      <div style="display:flex;flex-direction:column;gap:16px;grid-column:span 1">
-        <img src="./assets/38c8ddc265bedd0fbd4ebabfac852684.png" alt="A&amp;AI StratEdge Consulting" style="height:64px;width:auto;display:block;filter:brightness(0) invert(1)">
+      <div style="display:flex;flex-direction:column;gap:20px;grid-column:span 1">
+        <img src="./assets/38c8ddc265bedd0fbd4ebabfac852684.png" alt="A&amp;AI StratEdge Consulting" style="height:64px;width:auto;display:block">
+        <p style="margin:0;font-size:13px;line-height:1.7;color:#8FA8C4;max-width:220px">Bahrain · KSA · UAE<br>Kingdom of Bahrain · GCC</p>
       </div>
 
       <!-- Quick links col -->
@@ -226,9 +292,13 @@ input,select,textarea{font-family:inherit}
       <!-- Contact col -->
       <div style="display:flex;flex-direction:column;gap:14px">
         <span style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1FB5A8">Get in Touch</span>
-        <a href="tel:[PHONE]" style="display:flex;align-items:center;gap:10px;font-size:15px;color:#C9D6E6;text-decoration:none" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#C9D6E6'">
+        <a href="tel:[PHONE_BAHRAIN_KSA]" style="display:flex;align-items:center;gap:10px;font-size:15px;color:#C9D6E6;text-decoration:none" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#C9D6E6'">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          [PHONE]
+          Bahrain &amp; KSA: [PHONE_BAHRAIN_KSA]
+        </a>
+        <a href="tel:[PHONE_UAE]" style="display:flex;align-items:center;gap:10px;font-size:15px;color:#C9D6E6;text-decoration:none" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#C9D6E6'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          UAE: [PHONE_UAE]
         </a>
         <a href="mailto:[EMAIL]" style="display:flex;align-items:center;gap:10px;font-size:15px;color:#C9D6E6;text-decoration:none" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#C9D6E6'">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
@@ -277,22 +347,22 @@ class Component extends DCLogic {
       {
         n: '01', title: 'Management Consulting', bg: '#0F5E5A', numColor: '#7FE3D9',
         intro: 'Practical strategy and structure to help your business run better.',
-        items: ['Strategy and business planning', 'Process improvement', 'Governance and operating models', 'Performance and KPI frameworks']
+        items: ['Strategy and business planning', 'Process improvement', 'Governance and operating models', 'Performance and KPI frameworks', 'Finance & accounting operational Setup']
       },
       {
         n: '02', title: 'IT & Digital Advisory', bg: '#0E736E', numColor: '#B6F0EA',
         intro: 'Technology guidance that fits your business and your budget.',
-        items: ['Digital transformation roadmaps', 'AI-enabled technology advisory', 'Accounting and business software selection and implementation', 'IT systems and technology strategy']
+        items: ['Digital transformation roadmaps', 'AI-enabled technology advisory', 'Data analytics and business intelligence', 'Accounting and business software selection and implementation', 'IT systems and technology strategy']
       },
       {
         n: '03', title: 'Compliance & Governance Advisory', bg: '#1F2933', numColor: '#7FE3D9',
-        intro: 'Helping businesses meet applicable:',
-        items: ['Laws and regulations', 'Reporting duties', 'Governance and internal control requirements']
+        intro: 'Helping you get ready for, and stay on top of, your obligations.',
+        items: ['Compliance readiness reviews', 'Gap assessments of financial, tax and operational processes', 'Internal control framework design']
       },
       {
         n: '04', title: 'Business Setup Support', bg: '#1B6B5F', numColor: '#B6F0EA',
-        intro: 'Support for entrepreneurs getting started in Bahrain and across the GCC.',
-        items: ['Company formation support: registration, documentation and filings', 'Business plans and feasibility studies']
+        intro: 'Support for entrepreneurs and growing businesses setting up or expanding in the region.',
+        items: ['Company formation support', 'Entity selection advisory', 'Market entry and GCC expansion planning', 'Business plans and feasibility studies', 'Post-registration compliance guidance']
       }
     ];
     return { pillars, services };
