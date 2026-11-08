@@ -265,11 +265,15 @@ footer svg{flex-shrink:0}
         <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Message
           <textarea name="message" rows="4" placeholder="How can we help?" style="padding:12px 14px;border:1.5px solid #AEBBCB;border-radius:10px;font-size:16px;box-sizing:border-box;width:100%;background:#FFFFFF;resize:vertical"></textarea>
         </label>
-        <button type="button" onclick="sendMail()" style="height:52px;border:0;border-radius:999px;background:#0A7C6E;color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer">Send message</button>
+        <button type="submit" id="send-btn" style="height:52px;border:0;border-radius:999px;background:#0A7C6E;color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer">Send message</button>
       </form>
       <script>
         // Vercel serverless function in this same project (see /api/send.js)
         var MAIL_API = '/api/send';
+        // The page runtime ignores inline onclick strings, so wire events here (delegated, survives re-renders)
+        document.addEventListener('submit', function (e) {
+          if (e.target && e.target.id === 'contact-form') { e.preventDefault(); sendMail(); }
+        });
         function sendMail() {
           var f = document.getElementById('contact-form');
           var btn = f.querySelector('button');
