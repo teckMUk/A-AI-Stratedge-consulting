@@ -21,6 +21,7 @@ input,select,textarea{font-family:inherit}
 /* Services responsive grid */
 @media(min-width:1025px){.svc-grid{grid-template-columns:repeat(4,1fr)!important}}
 @media(max-width:1024px){.svc-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:1024px){.svc-card-1{order:1}.svc-card-2{order:3}.svc-card-3{order:2}.svc-card-4{order:4}}
 /* WhatsApp floating button */
 .wa-float{
   position:fixed;bottom:28px;right:28px;z-index:9999;
@@ -71,11 +72,11 @@ input,select,textarea{font-family:inherit}
 
   <!-- HERO -->
   <section id="top" style="background:#0B2545;color:#FFFFFF;border-top:1px solid #1B3A63">
-    <div style="max-width:1200px;margin:0 auto;padding:80px 24px 96px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-      <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:24px">
-        <span style="align-self:flex-start;background:rgba(31,181,168,0.18);color:#7FE3D9;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.06em">MANAGEMENT · IT ADVISORY · DATA ANALYTICS · COMPLIANCE · BUSINESS SETUP</span>
-        <h1 style="margin:0;font-size:clamp(36px,5.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-0.02em">Where expertise meets <span style="color:#1FB5A8">intelligence.</span></h1>
-        <p style="margin:0;font-size:19px;line-height:1.6;color:#C9D6E6;max-width:560px">A consulting partner for SMEs, entrepreneurs and growing businesses, combining agile management consulting, data analytics and modern technology into insight-led business outcome.</p>
+    <div style="max-width:1200px;margin:0 auto;padding:60px 24px 72px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+      <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:24px">
+        <span style="align-self:flex-start;background:rgba(31,181,168,0.18);color:#7FE3D9;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:0.06em">MANAGEMENT · IT ADVISORY · DATA ANALYTICS · COMPLIANCE · BUSINESS SETUP</span>
+        <h1 style="margin:0;font-size:clamp(32px,5.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-0.02em">Where expertise meets <span style="color:#1FB5A8">intelligence.</span></h1>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#C9D6E6;max-width:560px">A consulting partner for SMEs, entrepreneurs and growing businesses, combining agile management consulting, data analytics and modern technology into insight-led business outcome.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a href="#contact" style="background:#1FB5A8;color:#0B2545;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px">Book a consultation</a>
           <a href="#services" style="border:2px solid #FFFFFF;color:#FFFFFF;padding:14px 26px;border-radius:999px;font-weight:700;font-size:16px">Explore our services</a>
@@ -83,16 +84,16 @@ input,select,textarea{font-family:inherit}
         <p style="margin:8px 0 0;font-size:15px;font-weight:700;letter-spacing:0.12em;color:#7FE3D9">AGILE · STEADFAST · TECH-DRIVEN</p>
       </div>
 
-      <div style="flex:0 1 440px;min-width:min(100%,280px);background:#12335C;border:1px solid #24497A;border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:32px;box-sizing:border-box">
-        <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="flex:1 1 280px;width:100%;background:#12335C;border:1px solid #24497A;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:28px;box-sizing:border-box">
+        <div style="display:flex;flex-direction:column;gap:14px">
           <span style="font-size:13px;font-weight:800;letter-spacing:0.12em;color:#1FB5A8">WHO WE HELP</span>
-          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:19px;font-weight:700">
-            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>SMEs</li>
-            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Entrepreneurs</li>
-            <li style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Growing businesses</li>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:18px;font-weight:700">
+            <li style="display:flex;align-items:center;gap:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>SMEs</li>
+            <li style="display:flex;align-items:center;gap:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Entrepreneurs</li>
+            <li style="display:flex;align-items:center;gap:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1FB5A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5L20 7"></path></svg>Growing businesses</li>
           </ul>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:14px">
           <span style="font-size:13px;font-weight:800;letter-spacing:0.12em;color:#1FB5A8">WHERE WE WORK</span>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <span style="border:2px solid #1FB5A8;color:#FFFFFF;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:800">Bahrain</span>
@@ -142,7 +143,7 @@ input,select,textarea{font-family:inherit}
       <div class="svc-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
 
         <!-- 01 -->
-        <div style="background:#0B2545;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div class="svc-card-1" style="background:#0D3B6E;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:28px;font-weight:800;line-height:1;color:#1FB5A8">01</span>
             <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Management Consulting</h3>
@@ -158,7 +159,7 @@ input,select,textarea{font-family:inherit}
         </div>
 
         <!-- 02 -->
-        <div style="background:#0F5E5A;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div class="svc-card-2" style="background:#0A7C6E;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:28px;font-weight:800;line-height:1;color:#7FE3D9">02</span>
             <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">IT &amp; Digital Advisory</h3>
@@ -174,7 +175,7 @@ input,select,textarea{font-family:inherit}
         </div>
 
         <!-- 03 -->
-        <div style="background:#12335C;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div class="svc-card-3" style="background:#12335C;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:28px;font-weight:800;line-height:1;color:#1FB5A8">03</span>
             <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Compliance &amp; Governance Advisory</h3>
@@ -188,7 +189,7 @@ input,select,textarea{font-family:inherit}
         </div>
 
         <!-- 04 -->
-        <div style="background:#0E736E;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div class="svc-card-4" style="background:#0E736E;color:#FFFFFF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="font-size:28px;font-weight:800;line-height:1;color:#B6F0EA">04</span>
             <h3 style="margin:0;font-size:17px;font-weight:800;line-height:1.2">Business Setup Support</h3>
@@ -226,7 +227,6 @@ input,select,textarea{font-family:inherit}
           <span>Phone (Bahrain &amp; KSA): [PHONE]</span>
           <span>Phone (UAE): [PHONE]</span>
           <span>Email: [EMAIL]</span>
-          <span>Web: [WEBSITE]</span>
           <a href="https://wa.me/[WHATSAPP_NUMBER]" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;color:#0F5E5A">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp: [WHATSAPP_NUMBER]
