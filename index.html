@@ -369,7 +369,6 @@ input,select,textarea{font-family:inherit}
             if (d.success === true) {
               f.reset();
               btn.textContent = 'Message sent \u2713'; btn.style.background = '#1E9E5A'; btn.style.opacity = '1';
-              showToast('Thank you! Your message has been sent. We will get back to you shortly.', 'success');
               setTimeout(function () { btn.textContent = original; btn.style.background = originalBg; btn.disabled = false; }, 5000);
             } else { throw new Error(d.message || 'failed'); }
           })
