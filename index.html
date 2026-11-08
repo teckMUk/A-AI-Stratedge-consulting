@@ -268,6 +268,8 @@ footer svg{flex-shrink:0}
         <button type="button" onclick="sendMail()" style="height:52px;border:0;border-radius:999px;background:#0A7C6E;color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer">Send message</button>
       </form>
       <script>
+        // Vercel serverless function in this same project (see /api/send.js)
+        var MAIL_API = '/api/send';
         function sendMail() {
           var f = document.getElementById('contact-form');
           var btn = f.querySelector('button');
@@ -278,34 +280,24 @@ footer svg{flex-shrink:0}
           var message = f.querySelector('[name=message]').value.trim();
           if (!name || !email) { alert('Please fill in your name and email.'); return; }
           if (!f.querySelector('[name=email]').checkValidity()) { alert('Please enter a valid email address.'); return; }
-          var original = btn.textContent;
-          btn.disabled = true; btn.textContent = 'Sending...';
-          fetch('https://formsubmit.co/ajax/contactus@aandaistratedge.com', {
+          var original = btn.textContent, originalBg = btn.style.background;
+          btn.disabled = true; btn.textContent = 'Sending...'; btn.style.opacity = '0.7';
+          fetch(MAIL_API, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({
-              _subject: 'Enquiry from ' + name + ' - ' + service,
-              _replyto: email,
-              _template: 'table',
-              _captcha: 'false',
-              Name: name,
-              Email: email,
-              Phone: phone || '-',
-              'Interested in': service,
-              Message: message || '-'
-            })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name, email: email, phone: phone, service: service, message: message })
           })
           .then(function (r) { return r.json(); })
           .then(function (d) {
-            if (d.success === 'true' || d.success === true) {
+            if (d.success === true) {
               f.reset();
-              btn.textContent = 'Message sent \u2713';
-              setTimeout(function () { btn.textContent = original; btn.disabled = false; }, 4000);
+              btn.textContent = 'Message sent \u2713'; btn.style.background = '#1E9E5A'; btn.style.opacity = '1';
+              setTimeout(function () { btn.textContent = original; btn.style.background = originalBg; btn.disabled = false; }, 5000);
             } else { throw new Error(d.message || 'failed'); }
           })
           .catch(function (err) {
             console.error('Contact form error:', err);
-            btn.textContent = original; btn.disabled = false;
+            btn.textContent = original; btn.style.opacity = '1'; btn.disabled = false;
             alert('Sorry, we could not send your message. Please email us at contactus@aandaistratedge.com or WhatsApp us.');
           });
         }
