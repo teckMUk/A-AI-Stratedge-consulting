@@ -270,20 +270,44 @@ footer svg{flex-shrink:0}
       <script>
         function sendMail() {
           var f = document.getElementById('contact-form');
+          var btn = f.querySelector('button');
           var name    = f.querySelector('[name=name]').value.trim();
           var email   = f.querySelector('[name=email]').value.trim();
           var phone   = f.querySelector('[name=phone]').value.trim();
           var service = f.querySelector('[name=service]').value;
           var message = f.querySelector('[name=message]').value.trim();
           if (!name || !email) { alert('Please fill in your name and email.'); return; }
-          var body = 'Name: ' + name
-            + '\nEmail: ' + email
-            + (phone ? '\nPhone/WhatsApp: ' + phone : '')
-            + '\nInterested in: ' + service
-            + (message ? '\n\nMessage:\n' + message : '');
-          window.location.href = 'mailto:contactus@aandaistratedge.com'
-            + '?subject=' + encodeURIComponent('Enquiry from ' + name + ' – ' + service)
-            + '&body=' + encodeURIComponent(body);
+          if (!f.querySelector('[name=email]').checkValidity()) { alert('Please enter a valid email address.'); return; }
+          var original = btn.textContent;
+          btn.disabled = true; btn.textContent = 'Sending...';
+          fetch('https://formsubmit.co/ajax/contactus@aandaistratedge.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              _subject: 'Enquiry from ' + name + ' - ' + service,
+              _replyto: email,
+              _template: 'table',
+              _captcha: 'false',
+              Name: name,
+              Email: email,
+              Phone: phone || '-',
+              'Interested in': service,
+              Message: message || '-'
+            })
+          })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.success === 'true' || d.success === true) {
+              f.reset();
+              btn.textContent = 'Message sent \u2713';
+              setTimeout(function () { btn.textContent = original; btn.disabled = false; }, 4000);
+            } else { throw new Error(d.message || 'failed'); }
+          })
+          .catch(function (err) {
+            console.error('Contact form error:', err);
+            btn.textContent = original; btn.disabled = false;
+            alert('Sorry, we could not send your message. Please email us at contactus@aandaistratedge.com or WhatsApp us.');
+          });
         }
       </script>
     </div>
